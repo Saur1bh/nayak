@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Full-stack Developer</p>
+          <h1>Hi, I'm <span>Saurabh</span><br />From India</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ------------------About--------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              As a seasoned full-stack developer, I specialize in crafting
+              dynamic and responsive user interfaces using Angular, coupled with
+              a robust Java backend. With a keen eye for design and a knack for
+              efficient coding, I seamlessly bridge the gap between frontend and
+              backend technologies, delivering cohesive and powerful web
+              applications. My expertise lies in creating intuitive user
+              experiences while ensuring the reliability and scalability of the
+              underlying architecture. Constantly staying abreast of the latest
+              trends and best practices, I bring a wealth of technical prowess
+              to every project, making me a versatile and valuable asset in the
+              world of full-stack development.
+            </p>
+            <div class="tab-title">
+              <p class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="openTab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="openTab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI?UX</span><br />Designing Web/App interfaces</li>
+                <li>
+                  <span>Angular & Java</span><br />Web/Android/iOS Development
+                </li>
+                <li>
+                  <span>vSphere Client remote plug-in</span><br />Local to
+                  Remote Development
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2022 - Current</span><br />Software Developer at Calsoft
+                  Inc
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2022</span><br />B.tech at IES Bhopal (MP)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------Services------------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>
+              Web design is the art and science of creating visually appealing
+              and user-friendly websites. It involves a harmonious blend of
+              graphic design, layout, and interactive elements to enhance the
+              overall user experience. Effective web design considers both
+              aesthetics and functionality, aiming to convey information
+              seamlessly while engaging visitors. Key aspects include responsive
+              design for various devices, intuitive navigation, and a focus on
+              user-centric interfaces. In essence, web design is about
+              translating ideas into a digital space that captivates and
+              facilitates user interaction.
+            </p>
+          </div>
+          <div>
+            <h2>UI/UX Design</h2>
+            <p>
+              UI/UX design is the art of enhancing user satisfaction by
+              improving the usability and accessibility of a digital interface.
+              User Interface (UI) focuses on the visual elements and layout,
+              ensuring a seamless and aesthetically pleasing experience.
+              Meanwhile, User Experience (UX) delves into the overall feel and
+              functionality, aiming to create an intuitive and enjoyable journey
+              for the user. The synergy of thoughtful UI/UX design results in
+              engaging, user-centric products that not only look great but also
+              deliver a satisfying and efficient interaction.
+            </p>
+          </div>
+          <div>
+            <h2>App Design</h2>
+            <p>
+              Effective app design is the art of balancing form and function. It
+              involves creating a seamless user experience through intuitive
+              interfaces, clear navigation, and visually appealing elements.
+              Thoughtful consideration of user needs, coupled with a minimalist
+              approach, ensures simplicity without sacrificing functionality. A
+              successful app design prioritizes user engagement, responsiveness,
+              and accessibility, ultimately enhancing the overall usability and
+              satisfaction of the application.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------Portfolio-------------------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work3.jpg" />
+            <div class="layer">
+              <h3>Cisco HyperFlex HTML Plugin for VMware vCenter</h3>
+              <p>
+                The Cisco HyperFlex vCenter Plugin is integrated with the
+                vSphere Web Client and supports all of the HX Data Platform
+                post-installation management and monitoring functions. Access
+                the Cisco HyperFlex vCenter Plugin directly through the vSphere
+                Web Client Navigator.
+              </p>
+              <a
+                href="https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/AdminGuide/4_0/b_HyperFlexSystems_AdministrationGuide_4_0/m-html-plug-in-for-vmware-vcenter.html"
+                target="_blank"
+                >Know more</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img style="width: fit-content" src="images/work2.png" />
+            <div class="layer">
+              <h3>Cisco UCS Manager vCenter Remote Plugin</h3>
+              <p>
+                Cisco UCS vCenter integration plugin brings capabilities of UCS
+                Manager into vCenter and you can use your vCenter to manage all
+                your Cisco blades. The result is a single pane of glass for
+                VirtualCenter users to get both physical and virtual
+                infrastructure information for a given hypervisor.
+              </p>
+              <a
+                href="https://youtu.be/e2l3zLrLR_k?si=bsl2ZVOoPxpBbEWQ"
+                target="_blank"
+                >Know more</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work1.png" />
+            <div class="layer">
+              <h3>HX/UCS Manager VMWare vCenter Plug-in Appliance</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----------------Contact------------------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="social-icon">
+              <a href="#" class="fa fa-facebook"></a>
+              <a class="fa fa-mobile" title="8404940598"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a class="fa fa-google" title="cssaurabh9@gmail.com"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <a href="images/saurabh-cv.pdf" download class="btn">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright  &#169 Nayak. Made with &hearts; by Saurabh</p>
+      </div>
+    </div>
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
+        }
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzvJN1lKARItHEHuBnU0r2e5OGDww8B0anMqcgM3hVmaSzfKf44GyT8s6dJvKpOmeDq/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message send successfully!";
+            setTimeout(function () {
+              mgs.innerHTML = "";
+            }, 2000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
