@@ -311,12 +311,12 @@ form .btn2 {
     width: 150px;
   }
   .header-text {
-    margin-top: 75%;
-    font-size: 16px;
+    margin-top: 30%;
+    font-size: 26px;
   }
   .header-text h1 {
-    font-size: 30px;
-  }
+    font-size: 50px;
+  } 
   .about-col-1 img {
     width: 320px;
     border-radius: 15px;
