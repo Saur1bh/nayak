@@ -199,7 +199,7 @@
           <div class="contact-left">
             <h1 class="sub-title">Contact Me</h1>
             <div class="social-icon">
-              <!-- <a href="#" class="fa fa-facebook"></a> -->
+              <a href="https://www.facebook.com/S1urabh?mibextid=ZbWKwL" target="_blank" class="fa fa-facebook"></a>
               <a class="fa fa-mobile" href="tel:+918404940598" title="8404940598"></a>
               <!-- <a href="#" class="fa fa-twitter"></a> -->
               <a class="fa fa-google" href="mailto:cssaurabh9@gmail.com" title="cssaurabh9@gmail.com"></a>
@@ -254,12 +254,13 @@
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.getElementById("msg");
       form.addEventListener("submit", (e) => {
+        msg.innerHTML = "Sending message please wait .....";
         e.preventDefault();
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             msg.innerHTML = "Message send successfully!";
             setTimeout(function () {
-              mgs.innerHTML = "";
+              msg.innerHTML = "";
             }, 2000);
             form.reset();
           })
