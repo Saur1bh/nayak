@@ -304,6 +304,11 @@ form .btn2 {
   font-weight: 300;
   margin-top: 20px;
 }
+.work-achivement img{
+  height: 100px;
+  width: 120px;
+  border-radius: 10px;
+}
 
 /* ---------------------css for small screen ------------------ */
 
@@ -332,6 +337,11 @@ nav .fas {
   .about-col-1 img {
     width: 320px;
     border-radius: 15px;
+  }
+  .work-achivement img{
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
   }
   form input,
   form textarea {
