@@ -5,275 +5,289 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Portfolio Website</title>
+  <title>Saurabh Kumar | Senior Software Developer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
   <div id="header">
     <div class="container">
       <nav>
-        <img src="logo.png" class="logo" />
+        <img src="logo.png" class="logo" alt="Saurabh Kumar logo" />
         <ul id="sidemenu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">My Work</a></li>
+          <li><a href="#services">Expertise</a></li>
+          <li><a href="#portfolio">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
           <i class="fas fa fa-times" onclick="closeMenu()"></i>
         </ul>
         <i class="fas fa fa-bars" onclick="openMenu()"></i>
       </nav>
-      <div class="header-text">
-        <p>Full-stack Developer</p>
-        <h1>Hi, I'm S<span>a</span>ur<span>ab</span>h<br />From India</h1>
+
+      <div class="hero-grid">
+        <div class="header-text">
+          <p class="eyebrow">Senior Software Developer | Calsoft</p>
+          <h1>Hi, I am S<span>a</span>ur<span>ab</span>h Kumar</h1>
+          <p class="header-summary reveal">
+            I build scalable enterprise web platforms with Angular, TypeScript, Node.js, and modern DevOps workflows backed by 4+ years of hands-on delivery.
+          </p>
+          <div class="hero-cta reveal">
+            <a class="btn" href="#portfolio">View Projects</a>
+            <a class="btn btn-ghost" href="mailto:cssaurabh9@gmail.com">Hire Me</a>
+          </div>
+        </div>
+
+        <aside class="hero-showcase reveal">
+          <div class="showcase-head">
+            <img src="user.jpg" alt="Saurabh Kumar portrait" />
+            <div>
+              <h3>Saurabh Kumar</h3>
+              <p>Senior Software Developer</p>
+            </div>
+          </div>
+          <p class="showcase-copy">
+            Building enterprise-grade frontend systems, API workflows, and scalable plugin platforms.
+          </p>
+          <div class="showcase-chips">
+            <span>Angular</span>
+            <span>TypeScript</span>
+            <span>Node.js</span>
+            <span>RxJS</span>
+            <span>Jenkins</span>
+            <span>VMware vCenter</span>
+          </div>
+          <p class="availability">Available for impactful engineering roles</p>
+        </aside>
+      </div>
+
+      <div class="hero-metrics reveal">
+        <div class="metric-card">
+          <h3 class="counter" data-target="4">0</h3>
+          <p>Years Experience</p>
+        </div>
+        <div class="metric-card">
+          <h3 class="counter" data-target="8">0</h3>
+          <p>Core Technologies</p>
+        </div>
+        <div class="metric-card">
+          <h3 class="counter" data-target="4">0</h3>
+          <p>Featured Projects</p>
+        </div>
       </div>
     </div>
   </div>
-  <!-- ------------------About--------------- -->
+
   <div id="about">
-    <div class="container">
+    <div class="container reveal">
+      <p class="section-tag">About</p>
       <div class="row">
         <div class="about-col-1">
-          <img style="margin-top: 20px;" src="user.jpg" />
+          <img style="margin-top: 20px;" src="user.jpg" alt="Portrait of Saurabh Kumar" />
         </div>
         <div class="about-col-2">
           <h1 class="sub-title">About Me</h1>
           <p class="description">
-            I am a skilled developer with expertise in Angular, HTML, CSS, JavaScript, TypeScript, Clarity, and Node.js,
-            among other technologies. With a strong foundation in both frontend and backend development, I ensure
-            high-quality software solutions.
-
-            Beyond technical expertise, I am a continuous learner with excellent decision-making, leadership, and
-            quality assurance skills. My proficiency in various development tools, including Git, GitHub, Bitbucket,
-            Scrubber, JIRA, CDET, Jenkins, and vRO, allows me to streamline workflows and enhance productivity.
-
-            With a balanced approach to technology and team management, I am committed to delivering efficient and
-            scalable solutions.
+            Senior Software Developer with 4+ years of experience delivering full-stack enterprise applications at
+            Calsoft. I specialize in Angular, TypeScript, JavaScript, and Node.js, with strong experience in building
+            performant UI modules, improving developer workflows, and shipping quality releases in agile teams.
+            <br /><br />
+            I combine technical depth with ownership, collaboration, and quality-focused execution. My hands-on
+            experience with Git, GitHub, Bitbucket, JIRA, Jenkins, and vRO helps me contribute across the entire
+            development lifecycle from design to deployment.
           </p>
           <div class="tab-title">
-            <p class="tab-links active-link" onclick="openTab('skills')">
-              Skills
-            </p>
-            <p class="tab-links" onclick="openTab('experience')">
-              Experience
-            </p>
-            <p class="tab-links" onclick="openTab('education')">Education</p>
-            <!-- <p class="tab-links" onclick="openTab('achievement')">Achievement</p> -->
+            <p class="tab-links active-link" onclick="openTab(event, 'skills')">Skills</p>
+            <p class="tab-links" onclick="openTab(event, 'experience')">Experience</p>
+            <p class="tab-links" onclick="openTab(event, 'education')">Education</p>
           </div>
           <div class="tab-contents active-tab" id="skills">
             <ul>
-              <li><span>Technical Skills</span><br />Angular, HTML and CSS, Javascript, Typescript, <br>NodeJs, Rxjs, Ngrx, Jest, Jesmine
-              </li>
-              <li>
-                <span>Soft Skills</span><br />Learner, Decision Making, Leadership, Quality Assurance
-              </li>
-              <li>
-                <span>Tools</span><br />Git, Github, Bitbucket, Scrubber, JIRA, CDET, Jenkins, vRO
-              </li>
-              <li>
-                <span>vSphere Client remote plug-in</span><br />Local to
-                Remote Development
-              </li>
+              <li><span>Technical Skills</span><br />Angular, HTML5, CSS3, JavaScript, TypeScript, Node.js, RxJS, NgRx, Jest, Jasmine, Clarity</li>
+              <li><span>Soft Skills</span><br />Problem Solving, Decision Making, Leadership, Collaboration, Quality Assurance</li>
+              <li><span>Tools and Platforms</span><br />Git, GitHub, Bitbucket, JIRA, CDET, Jenkins, vRO, vSphere Client</li>
+              <li><span>Specialization</span><br />vSphere Client Remote Plug-in Development</li>
             </ul>
           </div>
           <div class="tab-contents" id="experience">
             <ul>
-              <!-- <li>
-                  <span>Jan(2022) - Jul(2022)</span><br />Intern at Calsoft
-                  Inc
-                </li> -->
-              <li>
-                <span>2022 - Current (Calsoft
-                  Inc)</span><br />Senior Software Developer
-              </li>
-              <li><span style="color: #FFBB00;">Rising Star</span></li>
-              <li><span class="work-achievement"><img src="achivement.jpg" /></span></li>
+              <li><span>Calsoft Inc | 2022 - Present</span><br />Senior Software Developer</li>
+              <li>Developed and maintained enterprise-grade Angular applications with reusable, scalable UI architecture.</li>
+              <li>Built and integrated API-driven workflows to streamline platform management and monitoring experiences.</li>
+              <li>Collaborated across QA, DevOps, and product teams to improve release quality and deployment confidence.</li>
+              <li><span style="color: #ffbf3f;">Rising Star Award Recipient</span></li>
+              <li><span class="work-achievement"><img src="achivement.jpg" alt="Rising Star Award" /></span></li>
             </ul>
           </div>
           <div class="tab-contents" id="education">
             <ul>
-              <li><span>2022</span><br />B.tech at IES Bhopal (MP)<br />8.36/10.0</li>
+              <li><span>Bachelor of Technology | 2022</span><br />IES Bhopal, Madhya Pradesh<br />CGPA: 8.36/10.0</li>
             </ul>
           </div>
-          <!-- <div class="tab-contents" id="achievement">
-              <ul>
-                <li><span>2023</span> - Rising Star Award (Calsoft
-                  Inc)</li>
-                  <li><span class="work-achievement"><img src="achivement.jpg" /></span></li>
-              </ul>
-            </div> -->
         </div>
       </div>
     </div>
   </div>
-  <!-- -----------------Services------------- -->
+
   <div id="services">
-    <div class="container">
-      <h1 class="sub-title">My Services</h1>
+    <div class="container reveal">
+      <p class="section-tag">Expertise</p>
+      <h1 class="sub-title">Core Expertise</h1>
       <div class="services-list">
         <div>
-          <h2>Web Application Development</h2>
-          <p>
-            Build responsive and dynamic web applications using Angular for the frontend and Java (Spring Boot, for
-            instance) for the backend. This could include creating single-page applications (SPAs), progressive web apps
-            (PWAs), or enterprise-level applications.
-          </p>
+          <p class="service-index">01</p>
+          <h2>Enterprise Frontend Engineering</h2>
+          <p>Design and develop robust Angular applications with reusable component architecture, state management, and performance-first implementation.</p>
         </div>
         <div>
-          <h2>Custom Software Development</h2>
-          <p>
-            Offer bespoke software solutions tailored to the specific needs of clients. This could involve building
-            custom modules, integrations, or entire applications using Angular and Java.
-          </p>
+          <p class="service-index">02</p>
+          <h2>Full-Stack Product Development</h2>
+          <p>Build end-to-end modules from UI to backend integrations using TypeScript, Node.js, and API-based design patterns for scalable delivery.</p>
         </div>
         <div>
-          <h2>Full Stack Development</h2>
-          <p>
-            Provide end-to-end development services, covering both frontend and backend development using Angular and
-            Java. This could involve everything from UI/UX design to database integration and deployment.
-          </p>
+          <p class="service-index">03</p>
+          <h2>vCenter Plug-in Development</h2>
+          <p>Deliver VMware vCenter integrated plugin experiences with strong focus on usability, remote management workflows, and operational visibility.</p>
         </div>
         <div>
-          <h2>RESTful API Development</h2>
-          <p>
-            Develop RESTful APIs using Java, and integrate them with Angular frontend applications. This could involve
-            building APIs for various purposes such as data retrieval, authentication, or communication with external
-            systems.
-          </p>
+          <p class="service-index">04</p>
+          <h2>API Integration</h2>
+          <p>Integrate RESTful APIs into frontend systems for secure data exchange, reliable user flows, and seamless interaction with enterprise services.</p>
         </div>
         <div>
-          <h2>Migration and Upgradation Services</h2>
-          <p>
-            Help clients migrate their existing applications to Angular from other frameworks or libraries, or upgrade
-            their Java applications to newer versions. This could involve assessing the current setup, planning the
-            migration process, and executing it smoothly.
-          </p>
+          <p class="service-index">05</p>
+          <h2>Modernization and Upgrades</h2>
+          <p>Support migration and upgrade initiatives by improving architecture, reducing technical debt, and aligning applications with modern frontend standards.</p>
         </div>
         <div>
-          <h2>Consultation and Training</h2>
-          <p>
-            Offer consultation services to businesses looking to adopt Angular and Java technologies. This could include
-            advising on architecture decisions, best practices, performance optimization, and more. Additionally, you
-            could provide training workshops or seminars to upskill teams in Angular and Java development.
-          </p>
+          <p class="service-index">06</p>
+          <h2>DevOps-Aware Delivery</h2>
+          <p>Work effectively with CI/CD pipelines and collaborative tooling like Jenkins, JIRA, and Git ecosystems to deliver reliable software faster.</p>
         </div>
         <div>
-          <h2>Maintenance and Support</h2>
-          <p>
-            Provide ongoing maintenance and support services for applications built with Angular and Java. This could
-            involve debugging, performance tuning, security updates, and feature enhancements.
-          </p>
+          <p class="service-index">07</p>
+          <h2>Quality-Focused Engineering</h2>
+          <p>Ensure product quality through test-oriented development practices, issue triage, and continuous improvements in maintainability and performance.</p>
         </div>
       </div>
     </div>
   </div>
-  <!-- -----------------Portfolio-------------------- -->
+
+  <div id="timeline">
+    <div class="container reveal">
+      <p class="section-tag">Journey</p>
+      <h1 class="sub-title">Experience Highlights</h1>
+      <div class="timeline-list">
+        <article class="timeline-item reveal">
+          <span class="timeline-year">2022 - Present</span>
+          <h3>Senior Software Developer, Calsoft Inc</h3>
+          <p>Driving frontend and full-stack modules for enterprise virtualization platforms with ownership from design to production deployment.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-year">Key Achievement</span>
+          <h3>Rising Star Award</h3>
+          <p>Recognized for high-impact execution, cross-functional collaboration, and consistent quality in enterprise product delivery.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span class="timeline-year">Core Focus</span>
+          <h3>Angular and VMware Ecosystem</h3>
+          <p>Built and optimized vCenter-integrated plugin experiences, API-driven workflows, and reusable UI systems for scale and maintainability.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+
   <div id="portfolio">
-    <div class="container">
-      <h1 class="sub-title">My Work</h1>
+    <div class="container reveal">
+      <p class="section-tag">Projects</p>
+      <h1 class="sub-title">Featured Projects</h1>
       <div class="work-list">
         <div class="work">
-          <img src="work3.jpg" />
+          <img src="work3.jpg" alt="Cisco HyperFlex plugin project" />
           <div class="layer">
             <h3>Cisco HyperFlex HTML Plugin for VMware vCenter</h3>
-            <p>
-              The Cisco HyperFlex vCenter Plugin is integrated with the
-              vSphere Web Client and supports all of the HX Data Platform
-              post-installation management and monitoring functions. Access
-              the Cisco HyperFlex vCenter Plugin directly through the vSphere
-              Web Client Navigator.
-            </p>
-            <!-- <a
-                href="https://www.cisco.com/c/en/us/td/docs/hyperconverged_systems/HyperFlex_HX_DataPlatformSoftware/AdminGuide/4_0/b_HyperFlexSystems_AdministrationGuide_4_0/m-html-plug-in-for-vmware-vcenter.html"
-                target="_blank"
-                >Know more</a
-              > -->
+            <p>Built an integrated plugin experience within the vSphere Web Client to enable post-installation management and monitoring of HX Data Platform through a unified administrator workflow.</p>
+            <p class="project-stack">Angular | TypeScript | VMware vSphere</p>
           </div>
         </div>
         <div class="work">
-          <img style="width: fit-content" src="work2.png" />
+          <img src="work2.png" alt="Cisco UCS Manager plugin project" />
           <div class="layer">
             <h3>Cisco UCS Manager vCenter Remote Plugin</h3>
-            <p>
-              Cisco UCS vCenter integration plugin brings capabilities of UCS
-              Manager into vCenter and you can use your vCenter to manage all
-              your Cisco blades. The result is a single pane of glass for
-              VirtualCenter users to get both physical and virtual
-              infrastructure information for a given hypervisor.
-            </p>
-            <!-- <a
-                href="https://youtu.be/e2l3zLrLR_k?si=bsl2ZVOoPxpBbEWQ"
-                target="_blank"
-                >Know more</a
-              > -->
+            <p>Enabled vCenter users to manage Cisco blade infrastructure directly from a single pane of glass by bringing UCS Manager capabilities into a unified virtualization dashboard.</p>
+            <p class="project-stack">Angular | JavaScript | Enterprise Integration</p>
           </div>
         </div>
         <div class="work">
-          <img src="work4.png" />
+          <img src="work4.png" alt="SkillSync internal collaboration project" />
           <div class="layer">
             <h3>SkillSync</h3>
-            <p>
-              Here's a sneak peek at how SkillSync can benefit our team:
-              🔍 **Knowledge Discovery:**
-              🤝 **Expert Matching:**
-              And the list goes on! With SkillSync, we're not just improving collaboration; we're supercharging our
-              productivity and empowering every team member to shine.
-              Ready to take our team's collaboration to the next level...
-            </p>
+            <p>Built an internal collaboration solution focused on knowledge discovery and expert matching to improve productivity, reduce dependency bottlenecks, and strengthen team-wide delivery outcomes.</p>
+            <p class="project-stack">TypeScript | Collaboration Platform</p>
           </div>
         </div>
         <div class="work">
-          <img src="work1.png" />
+          <img src="work1.png" alt="HX UCS Manager appliance project" />
           <div class="layer">
-            <h3>HX/UCS Manager VMWare vCenter Plug-in Appliance</h3>
+            <h3>HX/UCS Manager VMware vCenter Plug-in Appliance</h3>
+            <p>Contributed to appliance-level integration for vCenter plugin deployments, supporting reliable setup, management, and operational consistency in enterprise virtualized environments.</p>
+            <p class="project-stack">Remote Plug-in | VMware Appliance</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- ----------------Contact------------------- -->
+
   <div id="contact">
-    <div class="container">
+    <div class="container reveal">
+      <p class="section-tag">Contact</p>
       <div class="row">
         <div class="contact-left">
-          <h1 class="sub-title">Contact Me</h1>
+          <h1 class="sub-title">Let us build something great</h1>
+          <p class="contact-copy">Open to full-time roles and high-impact product engineering opportunities.</p>
+          <p class="contact-meta"><strong>Email:</strong> cssaurabh9@gmail.com</p>
+          <p class="contact-meta"><strong>Phone:</strong> +91 84049 40598</p>
           <div class="social-icon">
-            <a href="https://www.facebook.com/S1urabh?mibextid=ZbWKwL" target="_blank" class="fa fa-facebook"></a>
-            <!-- <a class="fa fa-mobile" href="tel:+918404940598" title="8404940598"></a> -->
-            <!-- <a href="#" class="fa fa-twitter"></a> -->
+            <a href="https://m.facebook.com/theSaurabhNayak/" target="_blank" class="fa fa-facebook"></a>
+            <a class="fa fa-mobile" href="tel:+918404940598" title="+91 84049 40598"></a>
             <a class="fa fa-google" href="mailto:cssaurabh9@gmail.com" title="cssaurabh9@gmail.com"></a>
-            <a href="https://www.linkedin.com/in/saurabh-kumar-427301171?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              class="fa fa-linkedin" target="_blank"></a>
-            <!-- <a href="#" class="fa fa-instagram"></a> -->
+            <a href="https://www.linkedin.com/in/saurabh-kumar-427301171?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="fa fa-linkedin" target="_blank"></a>
           </div>
-          <a class="btn">Feel free to reach out!</a>
+          <a class="btn" href="mailto:cssaurabh9@gmail.com">Send Email</a>
         </div>
         <div class="contact-right">
           <form name="submit-to-google-sheet">
             <input type="text" name="Name" placeholder="Your Name" required />
             <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="Message" rows="6" placeholder="Your Message.."></textarea>
-            <button class="btn btn2">Submit</button>
-            <!-- title="This button is currently disabled. Will be back soon. Thank you for your patience." disabled type="submit"  -->
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button class="btn btn2" type="submit">Submit</button>
           </form>
           <span id="msg"></span>
         </div>
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright &#169 Nayak. Made with &hearts; by Saurabh</p>
+      <p>Copyright &#169; Saurabh Kumar. Crafted for impact.</p>
     </div>
   </div>
+
   <script>
     var tabLinks = document.getElementsByClassName("tab-links");
     var tabContents = document.getElementsByClassName("tab-contents");
-    function openTab(tabName) {
-      for (tabLink of tabLinks) {
+    function openTab(event, tabName) {
+      for (var tabLink of tabLinks) {
         tabLink.classList.remove("active-link");
       }
-      for (tabContent of tabContents) {
+      for (var tabContent of tabContents) {
         tabContent.classList.remove("active-tab");
       }
       event.currentTarget.classList.add("active-link");
@@ -282,58 +296,93 @@
   </script>
 
   <script>
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwQIShVr4eS-WbxWwt-MJktL6MA0bRQbkz2CkyzlJl2dKNoZoL40t3k-jiJH8Au5ickog/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwQIShVr4eS-WbxWwt-MJktL6MA0bRQbkz2CkyzlJl2dKNoZoL40t3k-jiJH8Au5ickog/exec";
     const form = document.forms["submit-to-google-sheet"];
     const msg = document.getElementById("msg");
+
     form.addEventListener("submit", (e) => {
-      msg.innerHTML = "Sending message please wait .....";
       e.preventDefault();
+      msg.innerHTML = "Sending message, please wait...";
       fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        .then((response) => {
-          msg.innerHTML = "Message send successfully!";
+        .then(() => {
+          msg.innerHTML = "Message sent successfully!";
           setTimeout(function () {
             msg.innerHTML = "";
-          }, 2000);
+          }, 2200);
           form.reset();
         })
-        .catch((error) => console.error("Error!", error.message));
+        .catch((error) => {
+          msg.innerHTML = "Something went wrong. Please email directly.";
+          console.error("Error", error.message);
+        });
     });
   </script>
+
   <script>
     var sidemenu = document.getElementById("sidemenu");
     function openMenu() {
       sidemenu.style.right = "0";
     }
     function closeMenu() {
-      sidemenu.style.right = "-200px";
+      sidemenu.style.right = "-230px";
     }
   </script>
+
   <script>
-    document.addEventListener('contextmenu', function (event) {
-      event.preventDefault();
+    const revealElements = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    revealElements.forEach((el, index) => {
+      el.style.transitionDelay = `${Math.min(index * 60, 360)}ms`;
+      revealObserver.observe(el);
     });
-    document.addEventListener('keydown', function (event) {
-      // Disable F12
-      if (event.keyCode == 123) {
-        event.preventDefault();
-      }
-      // Disable Ctrl+Shift+I (Inspect)
-      if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
-        event.preventDefault();
-      }
-      // Disable Ctrl+Shift+J (Console)
-      if (event.ctrlKey && event.shiftKey && event.keyCode == 74) {
-        event.preventDefault();
-      }
-      // Disable Ctrl+U (View source)
-      if (event.ctrlKey && event.keyCode == 85) {
-        event.preventDefault();
-      }
-      // Disable Ctrl+Shift+c
-      if (event.ctrlKey && event.shiftKey && event.keyCode == 67) {
-        event.preventDefault();
-      }
+
+    const counters = document.querySelectorAll(".counter");
+    const runCounter = (counter) => {
+      const target = Number(counter.getAttribute("data-target"));
+      const duration = 1300;
+      const startTime = performance.now();
+
+      const step = (currentTime) => {
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        counter.textContent = String(Math.floor(progress * target));
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counter.textContent = String(target);
+        }
+      };
+
+      requestAnimationFrame(step);
+    };
+
+    const metricsObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          counters.forEach((counter) => runCounter(counter));
+          metricsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.45 });
+
+    const metricsSection = document.querySelector(".hero-metrics");
+    if (metricsSection) {
+      metricsObserver.observe(metricsSection);
+    }
+
+    const progressBar = document.getElementById("scrollProgress");
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
     });
   </script>
 </body>
